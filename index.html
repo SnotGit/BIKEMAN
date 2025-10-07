@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bikeman - Entretien Moto à Domicile | Nantes</title>
-    <meta name="description" content="Bikeman : entretien et mécanique moto à domicile sur Nantes. Soutenez le projet et bénéficiez de services gratuits dès juillet 2026.">
+    <meta name="description"
+        content="Bikeman : entretien et mécanique moto à domicile sur Nantes. Soutenez le projet et bénéficiez de services gratuits dès juillet 2026.">
     <style>
         * {
             margin: 0;
@@ -51,30 +53,31 @@
 
         .logo p {
             font-size: 0.6em;
-            margin-top: 5px;
+            margin-top: 10px;
             color: #e7e7e7;
-            font-style: italic;
+            font-weight: normal;
         }
 
-        /* Hero + Story + Countdown Section (FUSIONNÉ) */
+        /* Hero + Story + Countdown Section */
         .hero-story {
             background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-            padding: 80px 0;           
+            padding: 80px 0;
             text-align: center;
             border-bottom: 3px solid #FFD700;
         }
 
         .hero-story h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 20px;
-            color: #FFD700;
+            color: #fff;
         }
 
         .hero-story h2 {
-            color: #fff;
-            font-size: 2.5em;
+            color: #FFD700;
+            font-size: 1.5em;
             margin-bottom: 30px;
-            margin-top: 60px;
+            margin-top: 20px;
+            font-style: italic;
         }
 
         .hero-story p {
@@ -95,24 +98,6 @@
             margin: 30px 0;
             font-size: 1.5em;
             font-weight: bold;
-        }
-
-        .cta-button {
-            background: #FFD700;
-            color: #000;
-            padding: 20px 50px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
         }
 
         /* Paliers Section */
@@ -141,11 +126,8 @@
             border-radius: 10px;
             padding: 40px;
             text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .palier-card:hover {
-            transform: translateY(-10px);
+            display: flex;
+            flex-direction: column;
         }
 
         .palier-card h3 {
@@ -165,6 +147,7 @@
             list-style: none;
             margin: 30px 0;
             text-align: left;
+            flex-grow: 1;
         }
 
         .palier-card li {
@@ -181,6 +164,25 @@
             color: #FFD700;
             font-weight: bold;
             font-size: 1.2em;
+        }
+
+        .cta-button {
+            background: #FFD700;
+            color: #000;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: auto;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
         }
 
         /* Progress Bar */
@@ -285,45 +287,51 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
                 <span class="bike">BIKE</span><span class="man">MAN</span>
-                <p>"Un héro ne refuse jamais un sauvetage"</p>
+                <p>L'Entretien Moto à Domicile</p>
             </div>
         </div>
     </header>
 
-    <!-- Hero + Story + Countdown Section (FUSIONNÉ) -->
+    <!-- Hero + Story + Countdown Section -->
     <section class="hero-story">
         <div class="container">
-            <h1>L'Entretien Moto à Domicile</h1>
-            
-            <h2>L'Histoire Bikeman</h2>
+            <h1>L'Histoire Bikeman</h1>
+            <h2>"Un héro ne refuse jamais un sauvetage"</h2>
+
             <p>
-                Bonjour. Je m'appelle François, j'ai 40 ans, et depuis l'enfance je rêve de travailler sur des motos. 
-                Passionné de mécanique, aujourd'hui j'ai décidé de transformer ce rêve en réalité.
+                Bonjour. Je m'appelle François, j'ai 40 ans, et depuis l'enfance je tripatouille des deux roues.
+                Passionné de mécanique, aujourd'hui j'ai décidé de transformer un rêve en réalité.
             </p>
             <p>
-                <strong>Le 15 octobre 2025</strong>, je m'inscris à la formation CAP Mécanique Moto (option C) 
-                à l'Atelier des Chefs pour 8 mois de formation intensive. Diplôme en poche en juin 2026, 
-                je lancerai officiellement <strong>Bikeman</strong> le 1er juillet 2026.
+                <strong>Bikeman</strong>, c'est un motard et une moto, une ambulance pour vos bécannes.<br> 
+                Un service d'entretien et de réparation à domicile sur Nantes et son agglomération.<br>
+                Fini les contraintes : je viens chez vous et je m'occupe de tout.
             </p>
+            <br>
             <p>
-                <strong>Bikeman</strong>, c'est un service d'entretien et de réparation moto à domicile sur Nantes et sa périphérie. 
-                Fini les contraintes : je viens chez vous, vous continuez votre journée pendant que je m'occupe de votre bécane.
+                <strong>Le 15 octobre 2025</strong>, je m'inscris à la formation CAP Mécanique Moto.<br>
+                Diplôme en poche, fin juin 2026, je lancerai officiellement <strong>Bikeman</strong>.<br>
+                Sous un beau feu d'artifice et un apéro. Mes courageux supporters, vous, y serez convié.
             </p>
+            <br>
             <p>
-                Pour financer cette formation et m'équiper professionnellement, j'ai besoin de votre soutien. 
-                En échange, vous bénéficierez de prestations de main d'oeuvre gratuites dès le lancement de mon activité.
+                Pour financer cette formation et m'équiper professionnellement, j'ai besoin de votre soutien alors je lance une cagnotte participative.
+                En échange de votre confiance, je vous propose de bénéficier de prestations de main d'oeuvre gratuites dès le lancement de mon
+                activité. Je sais, c'est loin tout ça mais vous contriburez à la naissance d'un beau projet qui selon moi manque à beaucoup de gens.
+                Et puis, vous aurez la satisfaction d'avoir aidé un passionné à réaliser son rêve. Vous le rendre en prestations gratuites sera pour moi une belle façon de vous remercier d'avoir cru en Bikeman. 
             </p>
             <p style="color: #FFD700; font-size: 1.3em; margin-top: 30px;">
-                <strong>Vous investissez dans mon avenir, je vous offre mon expertise demain.</strong>
+                <strong>Investir aujourd'hui dans mon avenir c'est vous offrir mon expertise demain.</strong>
             </p>
 
-            <p style="font-size: 1.2em; margin-top: 50px; margin-bottom: 10px;">Pour y arriver il nous reste:</p>
+            <p style="font-size: 2em; margin-top: 50px; margin-bottom: 10px;">Pour y arriver il nous reste:</p>
             <div class="countdown">
                 ⏱️ <span id="countdown-timer">CHARGEMENT...</span>
             </div>
@@ -334,8 +342,8 @@
     <section class="paliers" id="paliers">
         <div class="container">
             <h2>Choisissez Votre Investissement Futur</h2>
-            <p style="text-align: center; color: #ddd; font-size: 1.2em; margin-bottom: 30px;">
-                Bons valables 1 an à partir de mi juillet 2026 • Transférables • Fournitures incluses*
+            <p style="text-align: center; color: #ddd; font-size: 1.3em; margin-bottom: 30px;">
+                Bons valables 1 an à partir du 14 juillet 2026 • Transférables • Fournitures incluses*
             </p>
 
             <div class="paliers-grid">
@@ -344,14 +352,14 @@
                     <h3>VIDANGE</h3>
                     <div class="price">100€</div>
                     <ul>
-                        <li>Vidange moteur complète</li>
-                        <li>Huile + filtre inclus (jusqu'à 5L)</li>
+                        <li>Vidange moteur</li>
+                        <li>Huile + filtre inclus</li>
                         <li>Joint de vidange neuf</li>
-                        <li>Nettoyage complet de votre moto</li>
+                        <li>Pack produits de nettoyage offert</li>
                         <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Investir 100€</a>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100" class="cta-button">Investir 100€</a>
                 </div>
 
                 <!-- Palier 200€ -->
@@ -362,11 +370,11 @@
                         <li>Changement plaquettes AV + ARR incluses</li>
                         <li>Purge complète du circuit</li>
                         <li>Liquide de frein neuf (500ml)</li>
-                        <li>Nettoyage complet de votre moto</li>
+                        <li>Pack produits de nettoyage offert</li>
                         <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_200" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Investir 200€</a>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_200" class="cta-button">Investir 200€</a>
                 </div>
 
                 <!-- Palier 300€ -->
@@ -378,17 +386,16 @@
                         <li>Changement bougies (jusqu'à 4)</li>
                         <li>Changement plaquettes AV + ARR</li>
                         <li>Filtre à air neuf</li>
-                        <li>Nettoyage complet de votre moto</li>
+                        <li>Pack produits de nettoyage offert</li>
                         <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_300" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Investir 300€</a>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_300" class="cta-button">Investir 300€</a>
                 </div>
             </div>
 
             <p style="text-align: center; color: #ddd; margin-top: 50px; font-size: 0.9em;">
-                *Fournitures incluses pour motos standards. Pour motos >1200cc, customs ou pièces premium, 
-                un supplément sur devis pourra être appliqué avec validation du client avant intervention.
+                *Fournitures incluses pour motos standards. Pour certaines motos, un supplément sur devis pourra être appliqué avec validation du client avant intervention.
             </p>
         </div>
     </section>
@@ -423,22 +430,25 @@
 
             <div class="faq-item">
                 <h3>Quelle zone couvrez-vous ?</h3>
-                <p>Loire-Atlantique (44), Nantes et alentours. Déplacement offert pour Nantes intramuros. Au-delà, légère surfacturation selon distance.</p>
+                <p>Loire-Atlantique (44), Nantes et alentours. Déplacement offert pour Nantes intramuros. Au-delà,
+                    légère surfacturation selon distance.</p>
             </div>
 
             <div class="faq-item">
                 <h3>Quels types de motos acceptez-vous ?</h3>
-                <p>Toutes cylindrées : sportives, routières, customs (Harley, Indian), trails, anciennes (>20 ans), scooters. Exclusion : motos et scooters électriques.</p>
+                <p>Toutes cylindrées : sportives, routières, customs, trails, anciennes (>20 ans),
+                    scooters. Exclusion : motos et scooters électriques.</p>
             </div>
 
             <div class="faq-item">
                 <h3>Quand pourrai-je utiliser mon bon ?</h3>
-                <p>Dès juillet 2026, après l'obtention de mon CAP et la création de mon statut auto-entrepreneur. Les bons sont valables 1 an à compter de juillet 2026.</p>
+                <p>Dès juillet 2026, après l'obtention de mon CAP et la création de mon statut auto-entrepreneur. Les
+                    bons sont valables 1 an à compter du 14 juillet 2026, soit jusqu'au 14 juillet 2027.</p>
             </div>
 
             <div class="faq-item">
-                <h3>Comment prendre rendez-vous ?</h3>
-                <p>Via un calendrier en ligne dédié (disponible à partir de mi juillet 2026) ou par téléphone. Délai minimum : 1 jour à l'avance.</p>
+                <h3>Comment prendre un futur rendez-vous ?</h3>
+                <p>Via un calendrier en ligne qui serta dédié ou par téléphone.</p>
             </div>
 
             <div class="faq-item">
@@ -448,22 +458,25 @@
 
             <div class="faq-item">
                 <h3>Que se passe-t-il si l'objectif minimum n'est pas atteint ?</h3>
-                <p>Si l'objectif de 1 000€ pour ma formation n'est pas atteint avant le 15 octobre, tous les participants seront intégralement remboursés.</p>
+                <p>Si l'objectif de 1 000€ pour ma formation n'est pas atteint avant le 15 octobre, tous les
+                    participants seront intégralement remboursés. Voir Conditions générales d'utilisation et mentions légales</p>
             </div>
 
             <div class="faq-item">
                 <h3>Les pièces sont-elles vraiment incluses ?</h3>
-                <p>Oui, pour les motos standards et pièces d'origine adaptables. Pour les grosses cylindrées (>1200cc) ou pièces premium, un supplément pourra être demandé avec votre accord préalable.</p>
+                <p>Oui, pour les motos standards et pièces d'origine adaptables. Pour certaines motos, un supplément pourra être demandé avec votre accord préalable.</p>
             </div>
 
             <div class="faq-item">
                 <h3>Êtes-vous assuré ?</h3>
-                <p>Dès l'obtention de mon diplôme et la création de mon statut, je souscrirai une assurance RC Professionnelle obligatoire. Votre moto sera couverte pendant mes interventions.</p>
+                <p>Dès l'obtention de mon diplôme et la création de mon statut, je souscrirai une assurance RC
+                    Professionnelle obligatoire. Votre moto sera couverte pendant mes interventions.</p>
             </div>
 
             <div class="faq-item">
                 <h3>Comment vous contacter ?</h3>
                 <p>Email : bikeman-services@gmail.com<br>Téléphone : 06 66 25 36 93</p>
+                <p>Un site web est en construction...</p>
             </div>
         </div>
     </section>
@@ -476,8 +489,8 @@
                 Nantes et Périphérie (44)
             </p>
             <p>
-                <a href="cgu.html">CGU</a> | 
-                <a href="mentions.html">Mentions Légales</a> | 
+                <a href="cgu.html">CGU</a> |
+                <a href="mentions.html">Mentions Légales</a> |
                 <a href="mailto:cropoms@aol.com">Contact</a>
             </p>
             <p style="margin-top: 20px; color: #888; font-size: 0.9em;">
@@ -503,15 +516,14 @@
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown-timer').textContent = 
+            document.getElementById('countdown-timer').textContent =
                 `${days}j ${hours}h ${minutes}m ${seconds}s restants`;
         }
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Simulation progression (À REMPLACER par vraie intégration PayPal/HelloAsso)
-        // Tu devras mettre à jour ces valeurs manuellement ou via API
+        // Progression cagnotte
         function updateProgress() {
             const currentAmount = 0; // À REMPLACER par montant réel
             const goal = 5000;
@@ -528,4 +540,5 @@
         updateProgress();
     </script>
 </body>
+
 </html>
