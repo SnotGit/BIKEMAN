@@ -29,7 +29,7 @@
         header {
             background: #000;
             border-bottom: 3px solid #FFD700;
-            padding: 20px 0;
+            padding: 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -49,28 +49,45 @@
             color: #FFD700;
         }
 
-        /* Hero Section */
-        .hero {
+        .logo p {
+            font-size: 0.6em;
+            margin-top: 5px;
+            color: #e7e7e7;
+            font-style: italic;
+        }
+
+        /* Hero + Story + Countdown Section (FUSIONNÉ) */
+        .hero-story {
             background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-            padding: 80px 0;
+            padding: 80px 0;           
             text-align: center;
             border-bottom: 3px solid #FFD700;
         }
 
-        .hero h1 {
+        .hero-story h1 {
             font-size: 3em;
             margin-bottom: 20px;
             color: #FFD700;
         }
 
-        .hero p {
-            font-size: 1.3em;
+        .hero-story h2 {
+            color: #fff;
+            font-size: 2.5em;
             margin-bottom: 30px;
+            margin-top: 60px;
+        }
+
+        .hero-story p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
             color: #ddd;
         }
 
         .countdown {
-            background: #FFD700;
+            background: #d8d8d8;
             color: #000;
             padding: 20px;
             border-radius: 10px;
@@ -98,64 +115,6 @@
             transform: scale(1.05);
         }
 
-        /* Progress Bar */
-        .progress-section {
-            background: #1a1a1a;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .progress-bar-container {
-            background: #000;
-            height: 50px;
-            border-radius: 25px;
-            overflow: hidden;
-            margin: 30px auto;
-            max-width: 800px;
-            border: 2px solid #FFD700;
-        }
-
-        .progress-bar {
-            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
-            height: 100%;
-            width: 0%;
-            transition: width 1s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .amount-raised {
-            font-size: 2.5em;
-            color: #FFD700;
-            margin: 20px 0;
-        }
-
-        /* Story Section */
-        .story {
-            background: #000;
-            padding: 80px 0;
-        }
-
-        .story h2 {
-            color: #fff;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .story p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #ddd;
-        }
-
         /* Paliers Section */
         .paliers {
             background: #1a1a1a;
@@ -163,7 +122,7 @@
         }
 
         .paliers h2 {
-            color: #FFD700;
+            color: #e7e7e7;
             font-size: 2.5em;
             margin-bottom: 50px;
             text-align: center;
@@ -224,9 +183,44 @@
             font-size: 1.2em;
         }
 
+        /* Progress Bar */
+        .progress-section {
+            background: #000;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .progress-bar-container {
+            background: #000;
+            height: 50px;
+            border-radius: 25px;
+            overflow: hidden;
+            margin: 30px auto;
+            max-width: 800px;
+            border: 2px solid #FFD700;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .amount-raised {
+            font-size: 2.5em;
+            color: #FFD700;
+            margin: 20px 0;
+        }
+
         /* FAQ Section */
         .faq {
-            background: #000;
+            background: #1a1a1a;
             padding: 80px 0;
         }
 
@@ -238,7 +232,7 @@
         }
 
         .faq-item {
-            background: #1a1a1a;
+            background: #000;
             border-left: 4px solid #FFD700;
             padding: 25px;
             margin-bottom: 20px;
@@ -277,7 +271,7 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero-story h1 {
                 font-size: 2em;
             }
 
@@ -297,25 +291,105 @@
         <div class="container">
             <div class="logo">
                 <span class="bike">BIKE</span><span class="man">MAN</span>
+                <p>"Un héro ne refuse jamais un sauvetage"</p>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero + Story + Countdown Section (FUSIONNÉ) -->
+    <section class="hero-story">
         <div class="container">
-            <h1>Entretien Moto à Domicile</h1>
-            <p>Un héro ne refuse jamais un sauvetage</p>
-            <p>Chers amis Motards et Motardes !</p>
-            <p>Si vous souhaitez m'aider à réaliser mon rêve : devenir mécanicien moto professionnel,</p>
-            <p>vous pouvez soutenir mon projet et bénéficier d'avantages pour vous remercier d'y croire et de me faire confiance.</p>
+            <h1>L'Entretien Moto à Domicile</h1>
             
+            <h2>L'Histoire Bikeman</h2>
+            <p>
+                Bonjour. Je m'appelle François, j'ai 40 ans, et depuis l'enfance je rêve de travailler sur des motos. 
+                Passionné de mécanique, aujourd'hui j'ai décidé de transformer ce rêve en réalité.
+            </p>
+            <p>
+                <strong>Le 15 octobre 2025</strong>, je m'inscris à la formation CAP Mécanique Moto (option C) 
+                à l'Atelier des Chefs pour 8 mois de formation intensive. Diplôme en poche en juin 2026, 
+                je lancerai officiellement <strong>Bikeman</strong> le 1er juillet 2026.
+            </p>
+            <p>
+                <strong>Bikeman</strong>, c'est un service d'entretien et de réparation moto à domicile sur Nantes et sa périphérie. 
+                Fini les contraintes : je viens chez vous, vous continuez votre journée pendant que je m'occupe de votre bécane.
+            </p>
+            <p>
+                Pour financer cette formation et m'équiper professionnellement, j'ai besoin de votre soutien. 
+                En échange, vous bénéficierez de prestations de main d'oeuvre gratuites dès le lancement de mon activité.
+            </p>
+            <p style="color: #FFD700; font-size: 1.3em; margin-top: 30px;">
+                <strong>Vous investissez dans mon avenir, je vous offre mon expertise demain.</strong>
+            </p>
+
+            <p style="font-size: 1.2em; margin-top: 50px; margin-bottom: 10px;">Pour y arriver il nous reste:</p>
             <div class="countdown">
                 ⏱️ <span id="countdown-timer">CHARGEMENT...</span>
             </div>
-            
-            <br><br>
-            <a href="#paliers" class="cta-button">SOUTENIR LE PROJET</a>
+        </div>
+    </section>
+
+    <!-- Paliers Section -->
+    <section class="paliers" id="paliers">
+        <div class="container">
+            <h2>Choisissez Votre Investissement Futur</h2>
+            <p style="text-align: center; color: #ddd; font-size: 1.2em; margin-bottom: 30px;">
+                Bons valables 1 an à partir de mi juillet 2026 • Transférables • Fournitures incluses*
+            </p>
+
+            <div class="paliers-grid">
+                <!-- Palier 100€ -->
+                <div class="palier-card">
+                    <h3>VIDANGE</h3>
+                    <div class="price">100€</div>
+                    <ul>
+                        <li>Vidange moteur complète</li>
+                        <li>Huile + filtre inclus (jusqu'à 5L)</li>
+                        <li>Joint de vidange neuf</li>
+                        <li>Nettoyage complet de votre moto</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
+                        <li>Tasse céramique Bikeman personnalisée offerte</li>
+                    </ul>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Investir 100€</a>
+                </div>
+
+                <!-- Palier 200€ -->
+                <div class="palier-card">
+                    <h3>FREINAGE</h3>
+                    <div class="price">200€</div>
+                    <ul>
+                        <li>Changement plaquettes AV + ARR incluses</li>
+                        <li>Purge complète du circuit</li>
+                        <li>Liquide de frein neuf (500ml)</li>
+                        <li>Nettoyage complet de votre moto</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
+                        <li>Tasse céramique Bikeman personnalisée offerte</li>
+                    </ul>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_200" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Investir 200€</a>
+                </div>
+
+                <!-- Palier 300€ -->
+                <div class="palier-card">
+                    <h3>LA COMPLETE</h3>
+                    <div class="price">300€</div>
+                    <ul>
+                        <li>Vidange moteur (huile + filtre)</li>
+                        <li>Changement bougies (jusqu'à 4)</li>
+                        <li>Changement plaquettes AV + ARR</li>
+                        <li>Filtre à air neuf</li>
+                        <li>Nettoyage complet de votre moto</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
+                        <li>Tasse céramique Bikeman personnalisée offerte</li>
+                    </ul>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_300" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Investir 300€</a>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: #ddd; margin-top: 50px; font-size: 0.9em;">
+                *Fournitures incluses pour motos standards. Pour motos >1200cc, customs ou pièces premium, 
+                un supplément sur devis pourra être appliqué avec validation du client avant intervention.
+            </p>
         </div>
     </section>
 
@@ -342,156 +416,55 @@
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="story">
-        <div class="container">
-            <h2>L'Histoire Bikeman</h2>
-            <p>
-                Bonjour. Je m'appelle François, j'ai 40 ans, et depuis l'enfance je rêve de travailler sur des motos. 
-                Passionné de mécanique, aujourd'hui j'ai décidé de transformer ce rêve en réalité.
-            </p>
-            <p>
-                <strong>Le 15 octobre 2025</strong>, je m'inscris à la formation CAP Mécanique Moto (option C) 
-                à l'Atelier des Chefs pour 8 mois de formation intensive. Diplôme en poche en juin 2026, 
-                je lancerai officiellement <strong>Bikeman</strong> le 1er juillet 2026.
-            </p>
-            <p>
-                <strong>Bikeman</strong>, c'est un service d'entretien et de réparation moto à domicile sur Nantes et sa périphérie. 
-                Fini les contraintes : je viens chez vous, vous continuez votre journée pendant que je m'occupe de votre bécane.
-            </p>
-            <p>
-                Pour financer cette formation et m'équiper professionnellement, j'ai besoin de votre aide. 
-                En échange, vous bénéficierez de prestations de main d'oeuvre gratuites dès le lancement de mon activité.
-            </p>
-            <p style="color: #FFD700; font-size: 1.3em; margin-top: 30px;">
-                <strong>Vous investissez dans mon avenir, je vous offre mon expertise demain.</strong>
-            </p>
-        </div>
-    </section>
-
-    <!-- Paliers Section -->
-    <section class="paliers" id="paliers">
-        <div class="container">
-            <h2>Choisissez Votre Palier</h2>
-            <p style="text-align: center; color: #ddd; font-size: 1.2em; margin-bottom: 30px;">
-                Bons valables 1 an à partir de mi juillet 2026 • Transférables • Fournitures incluses*
-            </p>
-
-            <div class="paliers-grid">
-                <!-- Palier 100€ -->
-                <div class="palier-card">
-                    <h3>VIDANGE</h3>
-                    <div class="price">100€</div>
-                    <ul>
-                        <li>Vidange moteur complète</li>
-                        <li>Huile + filtre inclus (jusqu'à 5L)</li>
-                        <li>Joint de vidange neuf</li>
-                        <li>Nettoyage complet de votre moto</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
-                        <li>Tasse céramique Bikeman personnalisée</li>
-                    </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Choisir 100€</a>
-                </div>
-
-                <!-- Palier 200€ -->
-                <div class="palier-card">
-                    <h3>FREINAGE</h3>
-                    <div class="price">200€</div>
-                    <ul>
-                        <li>Changement plaquettes AV + ARR incluses</li>
-                        <li>Purge complète du circuit</li>
-                        <li>Liquide de frein neuf (500ml)</li>
-                        <li>Nettoyage complet de votre moto</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
-                        <li>Tasse céramique Bikeman personnalisée</li>
-                    </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_200" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Choisir 200€</a>
-                </div>
-
-                <!-- Palier 300€ -->
-                <div class="palier-card">
-                    <h3>ENTRETIEN COMPLET</h3>
-                    <div class="price">300€</div>
-                    <ul>
-                        <li>Vidange moteur (huile + filtre)</li>
-                        <li>Changement bougies (jusqu'à 4)</li>
-                        <li>Changement plaquettes AV + ARR</li>
-                        <li>Filtre à air neuf</li>
-                        <li>Nettoyage complet de votre moto</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
-                        <li>Tasse céramique Bikeman personnalisée</li>
-                    </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_300" class="cta-button" style="font-size: 1.2em; padding: 15px 40px; margin-top: 20px;">Choisir 300€</a>
-                </div>
-            </div>
-
-            <p style="text-align: center; color: #ddd; margin-top: 50px; font-size: 0.9em;">
-                *Fournitures incluses pour motos standards. Pour motos >1200cc, customs ou pièces premium, 
-                un supplément sur devis pourra être appliqué avec validation du client avant intervention.
-            </p>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
             <h2>Questions Fréquentes</h2>
 
             <div class="faq-item">
-                <h3>📍 Quelle zone couvrez-vous ?</h3>
-                <p>Loire-Atlantique (44), priorité Nantes et périphérie proche. Déplacement offert pour Nantes intramuros. Au-delà, possibilité de surfacturation selon distance.</p>
+                <h3>Quelle zone couvrez-vous ?</h3>
+                <p>Loire-Atlantique (44), Nantes et alentours. Déplacement offert pour Nantes intramuros. Au-delà, légère surfacturation selon distance.</p>
             </div>
 
             <div class="faq-item">
-                <h3>🏍️ Quels types de motos acceptez-vous ?</h3>
+                <h3>Quels types de motos acceptez-vous ?</h3>
                 <p>Toutes cylindrées : sportives, routières, customs (Harley, Indian), trails, anciennes (>20 ans), scooters. Exclusion : motos et scooters électriques.</p>
             </div>
 
             <div class="faq-item">
-                <h3>⏰ Quand pourrai-je utiliser mon bon ?</h3>
+                <h3>Quand pourrai-je utiliser mon bon ?</h3>
                 <p>Dès juillet 2026, après l'obtention de mon CAP et la création de mon statut auto-entrepreneur. Les bons sont valables 1 an à compter de juillet 2026.</p>
             </div>
 
             <div class="faq-item">
-                <h3>📅 Comment prendre rendez-vous ?</h3>
+                <h3>Comment prendre rendez-vous ?</h3>
                 <p>Via un calendrier en ligne dédié (disponible à partir de mi juillet 2026) ou par téléphone. Délai minimum : 1 jour à l'avance.</p>
             </div>
 
             <div class="faq-item">
-                <h3>🎁 Puis-je transférer mon bon à quelqu'un d'autre ?</h3>
+                <h3>Puis-je transférer mon bon à quelqu'un d'autre ?</h3>
                 <p>Oui ! Les bons sont transférables. Contactez-moi simplement pour effectuer le transfert.</p>
             </div>
 
             <div class="faq-item">
-                <h3>💰 Que se passe-t-il si l'objectif minimum n'est pas atteint ?</h3>
+                <h3>Que se passe-t-il si l'objectif minimum n'est pas atteint ?</h3>
                 <p>Si l'objectif de 1 000€ pour ma formation n'est pas atteint avant le 15 octobre, tous les participants seront intégralement remboursés.</p>
             </div>
 
             <div class="faq-item">
-                <h3>🔧 Les pièces sont-elles vraiment incluses ?</h3>
+                <h3>Les pièces sont-elles vraiment incluses ?</h3>
                 <p>Oui, pour les motos standards et pièces d'origine adaptables. Pour les grosses cylindrées (>1200cc) ou pièces premium, un supplément pourra être demandé avec votre accord préalable.</p>
             </div>
 
             <div class="faq-item">
-                <h3>📜 Êtes-vous assuré ?</h3>
+                <h3>Êtes-vous assuré ?</h3>
                 <p>Dès l'obtention de mon diplôme et la création de mon statut, je souscrirai une assurance RC Professionnelle obligatoire. Votre moto sera couverte pendant mes interventions.</p>
             </div>
 
             <div class="faq-item">
-                <h3>📞 Comment vous contacter ?</h3>
+                <h3>Comment vous contacter ?</h3>
                 <p>Email : bikeman-services@gmail.com<br>Téléphone : 06 66 25 36 93</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="hero" style="padding: 60px 0;">
-        <div class="container">
-            <h2 style="color: #fff; margin-bottom: 20px;">Prêt à rejoindre l'aventure <span style="color: #fff;">BIKE</span><span style="color: #FFD700;">MAN</span> ?</h2>
-            <p style="color: #FFD700; font-size: 1.3em; margin-bottom: 30px;">
-                Chaque contribution compte. Ensemble, faisons bouger la mécanique moto nantaise.
-            </p>
-            <a href="#paliers" class="cta-button">CHOISIR MON PALIER</a>
         </div>
     </section>
 
@@ -503,8 +476,8 @@
                 Nantes et Périphérie (44)
             </p>
             <p>
-                <a href="#cgu">CGU</a> | 
-                <a href="#mentions">Mentions Légales</a> | 
+                <a href="cgu.html">CGU</a> | 
+                <a href="mentions.html">Mentions Légales</a> | 
                 <a href="mailto:cropoms@aol.com">Contact</a>
             </p>
             <p style="margin-top: 20px; color: #888; font-size: 0.9em;">
