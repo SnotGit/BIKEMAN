@@ -130,9 +130,14 @@
             flex-direction: column;
         }
 
-        /* La carte complète prend toute la largeur */
+        /* La carte complète prend 2 colonnes sur 3 */
         .palier-card.complete {
-            grid-column: 1 / -1;
+            grid-column: 1 / 3;
+        }
+
+        /* La carte don libre prend 1 colonne */
+        .palier-card.don-libre {
+            grid-column: 3 / 4;
         }
 
         .palier-card h3 {
@@ -155,11 +160,6 @@
             flex-grow: 1;
         }
 
-        .palier-card.complete ul {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
         .palier-card li {
             margin: 15px 0;
             padding-left: 30px;
@@ -174,6 +174,29 @@
             color: #FFD700;
             font-weight: bold;
             font-size: 1.2em;
+        }
+
+        /* Spécial card COMPLETE - 2 colonnes */
+        .palier-card.complete .services-wrapper {
+            display: flex;
+            gap: 10px;
+            margin: 30px 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .palier-card.complete .service-prestations {
+            flex: 0 0 auto;
+            min-width: 300px;
+        }
+
+        .palier-card.complete .service-bonus {
+            flex: 1;
+        }
+
+        .palier-card.complete .service-prestations ul,
+        .palier-card.complete .service-bonus ul {
+            margin: 0;
         }
 
         .cta-button {
@@ -297,6 +320,10 @@
             .palier-card.complete {
                 grid-column: 1 / -1;
             }
+
+            .palier-card.don-libre {
+                grid-column: 1 / -1;
+            }
         }
 
         @media (max-width: 768px) {
@@ -312,8 +339,25 @@
                 grid-template-columns: 1fr;
             }
 
-            .palier-card.complete ul {
-                grid-template-columns: 1fr;
+            .palier-card.complete .services-wrapper {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .palier-card.complete .service-prestations {
+                min-width: auto;
+            }
+
+            .palier-card.complete {
+                grid-column: 1;
+            }
+
+            .palier-card.don-libre {
+                grid-column: 1;
+            }
+
+            .palier-card.complete .cta-button {
+                width: auto;
             }
         }
     </style>
@@ -403,57 +447,80 @@
                         <li>Huile + filtre inclus</li>
                         <li>Joint de vidange neuf</li>
                         <li>Pack produits de nettoyage offert</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
+                        <li>Déplacement + main d'oeuvre offerts</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100" class="cta-button">Investir 100€</a>
+                    <a href="https://forms.gle/7jbDHRMfX3RMiRTx9" class="cta-button">Investir 100€</a>
                 </div>
 
-                <!-- Palier 100€ - FREINAGE -->
+                <!-- Palier 150€ - FREINAGE -->
                 <div class="palier-card">
                     <h3>FREINAGE</h3>
-                    <div class="price">100€</div>
+                    <div class="price">150€</div>
                     <ul>
                         <li>Changement plaquettes AV + ARR</li>
                         <li>Purge complète</li>
                         <li>Liquide de frein</li>
                         <li>Pack produits de nettoyage offert</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
+                        <li>Déplacement + main d'oeuvre offerts</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100B" class="cta-button">Investir 100€</a>
+                    <a href="https://forms.gle/RMcYqUYC3qwjRbi97" class="cta-button">Investir 100€</a>
                 </div>
 
-                <!-- Palier 200€ - KIT CHAINE -->
+                <!-- Palier 250€ - KIT CHAINE -->
                 <div class="palier-card">
                     <h3>KIT CHAINE</h3>
-                    <div class="price">200€</div>
+                    <div class="price">250€</div>
                     <ul>
                         <li>Changement Kit Chaine</li>
                         <li>Bombe de graisse offerte</li>
                         <li>Pack produits de nettoyage offert</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
+                        <li>Déplacement + main d'oeuvre offerts</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_200" class="cta-button">Investir 200€</a>
+                    <a href="https://forms.gle/6754Z2rCSuQwByWU6" class="cta-button">Investir 200€</a>
                 </div>
 
                 <!-- Palier 500€ - LA COMPLETE -->
                 <div class="palier-card complete">
-                    <h3>LA COMPLETE</h3>
+                    <h3>LA R&Eacute;VISION COMPL&Egrave;TE</h3>
                     <div class="price">500€</div>
+                    
+                    <div class="services-wrapper">
+                        <div class="service-prestations">
+                            <ul>
+                                <li>Vidange moteur</li>
+                                <li>Changement bougies (jusqu'à 4)</li>
+                                <li>Changement plaquettes AV + ARR</li>
+                                <li>Changement Kit Chaine</li>
+                                <li>Filtre à Air</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-bonus">
+                            <ul>
+                                <li>Bombe de graisse offerte</li>
+                                <li>Pack produits de nettoyage offert</li>
+                                <li>Déplacement + main d'oeuvre offerts</li>
+                                <li>Tasse personnalisée Bikeman offerte. Céramique ou émail</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="https://forms.gle/2zHgVrgYS3vAthhs5" class="cta-button">Investir 500€</a>
+                </div>
+
+                <!-- DON LIBRE -->
+                <div class="palier-card don-libre">
+                    <h3>DON LIBRE</h3>
+                    <div class="price" style="font-size: 2em;">Montant libre</div>
                     <ul>
-                        <li>Vidange moteur</li>
-                        <li>Bombe de graisse offerte</li>
-                        <li>Changement bougies (jusqu'à 4)</li>
-                        <li>Pack produits de nettoyage offert</li>                
-                        <li>Changement plaquettes AV + ARR</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
-                        <li>Changement Kit Chaine</li>
-                        <li>Tasse céramique Bikeman personnalisée offerte</li>
-                        <li>Filtre à Air</li>                                                                        
+                        <li>Vous pouvez faire un don libre</li>
+                        <li>Soutenez le projet à votre mesure</li>
+                        <li>Tasse céramique Bikeman personnalisée offerte<br>à partir de 30€</li>
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_500" class="cta-button">Investir 500€</a>
+                    <a href="https://forms.gle/yF8ciPby91VTwriA6" class="cta-button">Faire un don</a>
                 </div>
             </div>
 
@@ -494,14 +561,12 @@
 
             <div class="faq-item">
                 <h3>Quelle zone couvrez-vous ?</h3>
-                <p>Loire-Atlantique (44), Nantes et alentours. Déplacement offert pour Nantes intramuros. Au-delà,
-                    légère surfacturation selon distance.</p>
+                <p>Toute la Loire-Atlantique (44) et alentours</p>                    
             </div>
 
             <div class="faq-item">
                 <h3>Quels types de motos acceptez-vous ?</h3>
-                <p>Toutes cylindrées : sportives, routières, customs, trails, anciennes (>20 ans),
-                    scooters. Exclusion : motos et scooters électriques.</p>
+                <p>Tous types de motos. Exclusion : motos et scooters électriques.</p>
             </div>
 
             <div class="faq-item">
@@ -517,7 +582,7 @@
 
             <div class="faq-item">
                 <h3>Puis-je transférer mon bon à quelqu'un d'autre ?</h3>
-                <p>Oui ! Les bons sont transférables. Contactez-moi simplement pour effectuer le transfert.</p>
+                <p>Oui ! Les bons sont transférables. Contactez-moi pour effectuer le transfert.</p>
             </div>
 
             <div class="faq-item">
@@ -541,7 +606,7 @@
 
             <div class="faq-item">
                 <h3>Comment vous contacter ?</h3>
-                <p>Email : bikeman-services@gmail.com<br>Téléphone : 06 66 25 36 93</p>
+                <p>Email : bikeman.nantes@gmail.com<br>Téléphone : 06 66 25 36 93</p>
                 <p>Un site web est en construction...</p>
             </div>
         </div>
@@ -552,12 +617,11 @@
         <div class="container">
             <p style="color: #ddd; margin-bottom: 20px;">
                 Bikeman - Entretien Moto à Domicile<br>
-                Nantes et Périphérie (44)
             </p>
             <p>
                 <a href="cgu.html">CGU</a> |
                 <a href="mentions.html">Mentions Légales</a> |
-                <a href="mailto:bikeman-services@gmail.com">Contact</a>
+                <a href="mailto:bikeman.nantes@gmail.com">Contact</a>
             </p>
             <p style="margin-top: 20px; color: #888; font-size: 0.9em;">
                 © 2025 Bikeman - Tous droits réservés
