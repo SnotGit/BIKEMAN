@@ -115,7 +115,7 @@
 
         .paliers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 50px;
         }
@@ -128,6 +128,11 @@
             text-align: center;
             display: flex;
             flex-direction: column;
+        }
+
+        /* La carte complète prend toute la largeur */
+        .palier-card.complete {
+            grid-column: 1 / -1;
         }
 
         .palier-card h3 {
@@ -148,6 +153,11 @@
             margin: 30px 0;
             text-align: left;
             flex-grow: 1;
+        }
+
+        .palier-card.complete ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .palier-card li {
@@ -183,6 +193,13 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
+        }
+
+        .palier-card.complete .cta-button {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            width: 50%;
+            align-self: center;
         }
 
         /* Progress Bar */
@@ -272,6 +289,16 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .paliers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .palier-card.complete {
+                grid-column: 1 / -1;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero-story h1 {
                 font-size: 2em;
@@ -282,6 +309,10 @@
             }
 
             .paliers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .palier-card.complete ul {
                 grid-template-columns: 1fr;
             }
         }
@@ -303,16 +334,18 @@
     <section class="hero-story">
         <div class="container">
             <h1>L'histoire de Bikeman</h1>
-            <h2>"C'est l'histoire d'un mec.. Et il a une Bikemobile"</h2>
+            <h2>"C'est l'histoire d'un mec.. Et sa Bikemobile"</h2>
 
             <p>
                 Bonjour. Je m'appelle François, j'ai 40 ans, et depuis l'adolescence je tripatouille des deux roues.
                 Passionné de mécanique, aujourd'hui j'ai décidé de transformer un rêve en réalité.
             </p>
+            <br>
             <p>
-                <strong>Bikeman</strong>, c'est un motard et sa moto, une ambulance pour vos bécannes.<br> 
+                <strong>Bikeman</strong>, c'est un motard et sa moto, une ambulance pour vos bécannes.<br>
                 Un service d'entretien et de réparation à domicile en Loire Atlantique.<br>
-                Fini les contraintes : je viens chez vous et je s'occupe de tout.
+                Dépannage d'urgence dans la mesure du possible.<br>
+                Fini les contraintes : je viens à vous et je s'occupe de tout.
             </p>
             <br>
             <p>
@@ -322,13 +355,27 @@
             </p>
             <br>
             <p>
-                Pour financer cette formation et m'équiper professionnellement, j'ai besoin de votre soutien alors je lance une cagnotte participative.
-                En échange de votre confiance, je vous propose de bénéficier de prestations de main d'oeuvre gratuites dès le lancement de mon
-                activité. Je sais, c'est loin tout ça mais vous contriburez à la naissance d'un beau projet qui selon moi manque à beaucoup de gens.
-                Et puis, vous aurez la satisfaction d'avoir aidé un passionné à réaliser son rêve. Vous le rendre en prestations gratuites sera pour moi une belle façon de vous remercier d'avoir cru en Bikeman. 
+                Suite à un refus de financement pour cette formation je dois me débrouiller seul.<br>
+                Alors j'ai eu une idée : <strong>Faire appel aux motards.</strong> <br>
+
             </p>
             <p style="color: #FFD700; font-size: 1.3em; margin-top: 30px;">
-                <strong>Investir aujourd'hui dans mon avenir c'est vous offrir mon expertise demain.</strong>
+                Je solicite votre aide, votre soutient, en lançant une cagnotte participative.<br>
+            </p>
+
+            <p>
+                En échange de votre confiance, je vous propose de bénéficier<br>
+                de la main d'oeuvre gratuite dès le lancement de mon activité<br>
+                sous forme de bons d'achats. Avec quelques cadeaux.<br>
+                <br>
+                Je sais, c'est loin tout ça mais vous contriburez à la naissance d'un beau projet<br>
+                qui selon moi manque à beaucoup de gens.
+                Et puis, vous aurez la satisfaction<br> d'avoir aidé un passionné à réaliser un rêve d'enfant.<br>
+                Vous le rendre en prestations gratuites sera pour moi une belle façon de vous remercier d'avoir cru en
+                Bikeman.
+            </p>
+            <p style="color: #FFD700; font-size: 1.3em; margin-top: 30px;">
+                <strong>Investir aujourd'hui dans mon avenir, c'est vous offrir mes services demain.</strong>
             </p>
 
             <p style="font-size: 2em; margin-top: 50px; margin-bottom: 10px;">Pour y arriver il nous reste:</p>
@@ -347,7 +394,7 @@
             </p>
 
             <div class="paliers-grid">
-                <!-- Palier 100€ -->
+                <!-- Palier 100€ - VIDANGE -->
                 <div class="palier-card">
                     <h3>VIDANGE</h3>
                     <div class="price">100€</div>
@@ -356,46 +403,63 @@
                         <li>Huile + filtre inclus</li>
                         <li>Joint de vidange neuf</li>
                         <li>Pack produits de nettoyage offert</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
                     <a href="REMPLACER_PAR_LIEN_PAYPAL_100" class="cta-button">Investir 100€</a>
                 </div>
 
-                <!-- Palier 200€ -->
+                <!-- Palier 100€ - FREINAGE -->
                 <div class="palier-card">
                     <h3>FREINAGE</h3>
+                    <div class="price">100€</div>
+                    <ul>
+                        <li>Changement plaquettes AV + ARR</li>
+                        <li>Purge complète</li>
+                        <li>Liquide de frein</li>
+                        <li>Pack produits de nettoyage offert</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
+                        <li>Tasse céramique Bikeman personnalisée offerte</li>
+                    </ul>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_100B" class="cta-button">Investir 100€</a>
+                </div>
+
+                <!-- Palier 200€ - KIT CHAINE -->
+                <div class="palier-card">
+                    <h3>KIT CHAINE</h3>
                     <div class="price">200€</div>
                     <ul>
-                        <li>Changement plaquettes AV + ARR incluses</li>
-                        <li>Purge complète du circuit</li>
-                        <li>Liquide de frein neuf (500ml)</li>
+                        <li>Changement Kit Chaine</li>
+                        <li>Bombe de graisse offerte</li>
                         <li>Pack produits de nettoyage offert</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
                     </ul>
                     <a href="REMPLACER_PAR_LIEN_PAYPAL_200" class="cta-button">Investir 200€</a>
                 </div>
 
-                <!-- Palier 300€ -->
-                <div class="palier-card">
+                <!-- Palier 500€ - LA COMPLETE -->
+                <div class="palier-card complete">
                     <h3>LA COMPLETE</h3>
-                    <div class="price">300€</div>
+                    <div class="price">500€</div>
                     <ul>
-                        <li>Vidange moteur (huile + filtre)</li>
+                        <li>Vidange moteur</li>
+                        <li>Bombe de graisse offerte</li>
                         <li>Changement bougies (jusqu'à 4)</li>
+                        <li>Pack produits de nettoyage offert</li>                
                         <li>Changement plaquettes AV + ARR</li>
-                        <li>Filtre à air neuf</li>
-                        <li>Pack produits de nettoyage offert</li>
-                        <li>Déplacement + main d'oeuvre offerts (Nantes intramuros)</li>
+                        <li>Déplacement + main d'oeuvre offerts (Nantes et Aglomération)</li>
+                        <li>Changement Kit Chaine</li>
                         <li>Tasse céramique Bikeman personnalisée offerte</li>
+                        <li>Filtre à Air</li>                                                                        
                     </ul>
-                    <a href="REMPLACER_PAR_LIEN_PAYPAL_300" class="cta-button">Investir 300€</a>
+                    <a href="REMPLACER_PAR_LIEN_PAYPAL_500" class="cta-button">Investir 500€</a>
                 </div>
             </div>
 
             <p style="text-align: center; color: #ddd; margin-top: 50px; font-size: 0.9em;">
-                *Fournitures incluses pour motos standards. Pour certaines motos, un supplément sur devis pourra être appliqué avec validation du client avant intervention.
+                *Fournitures incluses pour motos standards. Pour certaines motos, un supplément sur devis pourra être
+                appliqué avec validation du client avant intervention.
             </p>
         </div>
     </section>
@@ -417,8 +481,8 @@
             </p>
             <p style="color: #ddd; margin-top: 10px;">
                 Objectif minimum : 1 000€ (inscription formation)<br>
-                Objectif confortable : 2 500€ (formation + outillage base)<br>
-                Objectif idéal : 5 000€ (équipement complet)
+                Objectif confortable : 2 500€ (formation + outillage de base)<br>
+                Objectif idéal : 5 000€ (outillage complet et fournitures)
             </p>
         </div>
     </section>
@@ -459,12 +523,14 @@
             <div class="faq-item">
                 <h3>Que se passe-t-il si l'objectif minimum n'est pas atteint ?</h3>
                 <p>Si l'objectif de 1 000€ pour ma formation n'est pas atteint avant le 15 octobre, tous les
-                    participants seront intégralement remboursés. Voir Conditions générales d'utilisation et mentions légales</p>
+                    participants seront intégralement remboursés. Voir Conditions générales d'utilisation et mentions
+                    légales</p>
             </div>
 
             <div class="faq-item">
                 <h3>Les pièces sont-elles vraiment incluses ?</h3>
-                <p>Oui, pour les motos standards et pièces d'origine adaptables. Pour certaines motos, un supplément pourra être demandé avec votre accord préalable.</p>
+                <p>Oui, pour les motos standards et pièces d'origine adaptables. Pour certaines motos, un supplément
+                    pourra être demandé avec votre accord préalable.</p>
             </div>
 
             <div class="faq-item">
@@ -491,7 +557,7 @@
             <p>
                 <a href="cgu.html">CGU</a> |
                 <a href="mentions.html">Mentions Légales</a> |
-                <a href="mailto:cropoms@aol.com">Contact</a>
+                <a href="mailto:bikeman-services@gmail.com">Contact</a>
             </p>
             <p style="margin-top: 20px; color: #888; font-size: 0.9em;">
                 © 2025 Bikeman - Tous droits réservés
